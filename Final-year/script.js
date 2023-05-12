@@ -7,3 +7,20 @@ document.addEventListener("visibilitychange", function() {
       document.title = "Miss you all";
     }
   });
+
+
+
+
+  window.addEventListener('load', function() {
+    // Get the audio element by its ID
+    var audio = document.getElementById('myAudio');
+
+    // Play the audio automatically when the page is visible
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'visible') {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+  });
